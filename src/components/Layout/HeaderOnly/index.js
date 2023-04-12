@@ -1,5 +1,5 @@
 import Header from '~/components/Layout/components/Header';
-function DefauLayout({ children }) {
+function HeaderOnly({ children }) {
     return (
         <div>
             <Header />
@@ -10,4 +10,4 @@ function DefauLayout({ children }) {
     );
 }
 
-export default DefauLayout;
+export default HeaderOnly;
