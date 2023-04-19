@@ -16,8 +16,11 @@
     align-items: center;
     justify-content: space-between;
 }
-.search {
+.search,
+.search-result {
     width: 361px;
+}
+.search {
     height: var(--search-height);
     background: rgba(22, 24, 35, 0.06);
     padding-left: 16px;
@@ -49,7 +52,16 @@
         border-color: rgba(22, 24, 35, 0.2);
     }
 }
-
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    font-weight: 500;
+    color: rgba(22, 24, 35, 0.5);
+}
+.search-result {
+}
 .clear,
 .loading {
     color: rgba(22, 24, 35, 0.34);
@@ -74,3 +86,4 @@
         background-color: rgba(22, 24, 35, 0.06);
     }
 }
+// tạo css riêng
