@@ -16,6 +16,7 @@
         color: var(black);
         background-color: transparent;
         flex: 1;
+        font-family: var(--font-family);
     }
     //how to select not empty css selector
     input:not(:placeholder-shown) ~ .search-btn {

@@ -7,7 +7,12 @@ import styles from './Menu.module.scss';
 import { useState } from 'react';
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({
+    children,
+    items = [],
+    hideOnClick = false,
+    onChange = defaultFn,
+}) {
     const [history, Sethistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
     const renderItems = () => {
@@ -30,6 +35,9 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     };
     return (
         <Tippy
+            //ngăn ko cho menu ẩn
+            hideOnClick={hideOnClick}
+            //
             delay={[0, 700]}
             offset={[12, 8]}
             interactive

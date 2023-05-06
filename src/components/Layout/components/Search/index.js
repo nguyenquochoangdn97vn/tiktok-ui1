@@ -43,6 +43,14 @@ function Search() {
     const handleHideResult = () => {
         setShowResult(false);
     };
+    // sữ lý không cho cách đầu input
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
+    };
+    //
     return (
         <HeaderlessTippy
             interactive
@@ -67,7 +75,7 @@ function Search() {
                     placeholder="search acounts videos"
                     spellCheck={false}
                     //e.target.value lấy chính element
-                    onChange={(e) => setSearchValue(e.target.value)}
+                    onChange={handleChange}
                     onFocus={() => setShowResult(true)}
                 />
                 {!!searchValue && !loading && (
@@ -81,7 +89,10 @@ function Search() {
                         icon={faSpinner}
                     />
                 )}
-                <button className={cx('search-btn')}>
+                <button
+                    className={cx('search-btn')}
+                    onMouseDown={(e) => e.preventDefault()}
+                >
                     <SearchIcon />
                 </button>
             </div>
