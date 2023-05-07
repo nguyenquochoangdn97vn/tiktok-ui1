@@ -52,51 +52,59 @@ function Search() {
     };
     //
     return (
-        <HeaderlessTippy
-            interactive
-            visible={showwResult && searchResult.length > 0}
-            render={(attrs) => (
-                <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper>
-                        <h4 className={cx('search-title')}>Acount</h4>
-                        {searchResult.map((result) => (
-                            <AccountItem key={result.id} data={result} />
-                        ))}
-                    </PopperWrapper>
-                </div>
-            )}
-            //ẩn đi list với tip
-            onClickOutside={handleHideResult}
-        >
-            <div className={cx('search')}>
-                <input
-                    ref={inputRef}
-                    value={searchValue}
-                    placeholder="search acounts videos"
-                    spellCheck={false}
-                    //e.target.value lấy chính element
-                    onChange={handleChange}
-                    onFocus={() => setShowResult(true)}
-                />
-                {!!searchValue && !loading && (
-                    <button className={cx('clear')} onClick={hanldeClear}>
-                        <FontAwesomeIcon icon={faCircleXmark} />
-                    </button>
+        //Using a wrapper <div> tag around the reference element solves
+        // this by creating a new parentNode context
+        <div>
+            <HeaderlessTippy
+                interactive
+                visible={showwResult && searchResult.length > 0}
+                render={(attrs) => (
+                    <div
+                        className={cx('search-result')}
+                        tabIndex="-1"
+                        {...attrs}
+                    >
+                        <PopperWrapper>
+                            <h4 className={cx('search-title')}>Acount</h4>
+                            {searchResult.map((result) => (
+                                <AccountItem key={result.id} data={result} />
+                            ))}
+                        </PopperWrapper>
+                    </div>
                 )}
-                {loading && (
-                    <FontAwesomeIcon
-                        className={cx('loading')}
-                        icon={faSpinner}
+                //ẩn đi list với tip
+                onClickOutside={handleHideResult}
+            >
+                <div className={cx('search')}>
+                    <input
+                        ref={inputRef}
+                        value={searchValue}
+                        placeholder="search acounts videos"
+                        spellCheck={false}
+                        //e.target.value lấy chính element
+                        onChange={handleChange}
+                        onFocus={() => setShowResult(true)}
                     />
-                )}
-                <button
-                    className={cx('search-btn')}
-                    onMouseDown={(e) => e.preventDefault()}
-                >
-                    <SearchIcon />
-                </button>
-            </div>
-        </HeaderlessTippy>
+                    {!!searchValue && !loading && (
+                        <button className={cx('clear')} onClick={hanldeClear}>
+                            <FontAwesomeIcon icon={faCircleXmark} />
+                        </button>
+                    )}
+                    {loading && (
+                        <FontAwesomeIcon
+                            className={cx('loading')}
+                            icon={faSpinner}
+                        />
+                    )}
+                    <button
+                        className={cx('search-btn')}
+                        onMouseDown={(e) => e.preventDefault()}
+                    >
+                        <SearchIcon />
+                    </button>
+                </div>
+            </HeaderlessTippy>
+        </div>
     );
 }
 

@@ -32,6 +32,30 @@ const MENU_ITEM = [
             data: [
                 { type: 'language', code: 'en', title: 'English' },
                 { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
+                { type: 'language', code: 'en', title: 'English' },
+                { type: 'tesss', code: 'vi', title: 'Tiếng việt' },
             ],
         },
     },
@@ -130,7 +154,7 @@ function Header() {
                     >
                         {currentUser ? (
                             <Image
-                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/f9b9300fbe38c1df59c6b5350002e471~c5_100x100.jpeg?x-expires=1682589600&x-signature=3yipqfhH%2BOzjlWwFUQ1m%2Bh9Pgm4%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/42a81079b5885e152707b170d63ba2df~c5_100x100.jpeg?x-expires=1683608400&x-signature=AQOcQ5QHING8VRa4Y366W9SmR9E%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyễn quốc Hoàng"
                                 // fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"

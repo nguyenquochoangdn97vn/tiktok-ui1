@@ -8,6 +8,11 @@
 .menu-popper {
     padding-bottom: 8px;
 }
+//thanh scroll langguage
+.menu-body {
+    overflow-y: auto;
+}
+//
 .menu-item {
     width: 100%;
     justify-content: flex-start;
@@ -25,6 +30,9 @@
 //header back
 .header {
     position: relative;
+    //thêm tránh scroll chiếm
+    flex-shrink: 0;
+    //
     height: 50px;
     margin-top: -8px;
 }
