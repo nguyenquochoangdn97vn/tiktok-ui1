@@ -1,0 +1,44 @@
+.wrapper {
+    width: 320px;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.avatar {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.follow-btn {
+    padding: 6px 16px;
+}
+.body {
+    margin-top: 12px;
+    color: #161823;
+}
+.nikname {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.check {
+    font-size: 1.4rem;
+    color: #20d5ec;
+    margin-left: 4px;
+}
+.name {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.anlytick {
+    margin-top: 8px;
+    font-size: 1.8rem;
+}
+.value ~ .value {
+    margin-left: 20px;
+}
+.label {
+    color: #161823bf;
+}
