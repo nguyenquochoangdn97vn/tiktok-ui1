@@ -154,7 +154,7 @@ function Header() {
                     >
                         {currentUser ? (
                             <Image
-                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7e17646c98cf4872b141e68c2c08a02d~c5_100x100.jpeg?x-expires=1683885600&x-signature=XhEjqOpjlf9mnlF2Wm3HvdUMOxQ%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/04c34c5b8177bdd712a0e2ed610827dd~c5_100x100.jpeg?x-expires=1684598400&x-signature=xq59HCIFtTAyKns2OL3zPcGSfoQ%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyễn quốc Hoàng"
                                 // fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
