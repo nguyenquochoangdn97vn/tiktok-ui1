@@ -10,6 +10,12 @@ import AcountPreview from './AcountPreview';
 import style from './SuggestedAccounts.module.scss';
 const cx = classNames.bind(style);
 function AccountItem({ data }) {
+    const {
+        nickname: userName,
+        first_name: firstName,
+        last_name: lastName,
+        avatar: avatarUrl,
+    } = data;
     const renderPreview = (props) => {
         return (
             <div tabIndex="-1">
@@ -33,8 +39,8 @@ function AccountItem({ data }) {
                 <div className={cx('account-item')}>
                     <Image
                         className={cx('avata')}
-                        src={data.avatar}
-                        alt={data.nickname}
+                        src={avatarUrl}
+                        alt={userName}
                     />
                     <div className={cx('item-info')}>
                         <p className={cx('nikname')}>
@@ -48,7 +54,7 @@ function AccountItem({ data }) {
                         </p>
                         <p
                             className={cx('name')}
-                        >{`${data.first_name} ${data.last_name}`}</p>
+                        >{`${firstName} ${lastName}`}</p>
                     </div>
                 </div>
             </Tippy>

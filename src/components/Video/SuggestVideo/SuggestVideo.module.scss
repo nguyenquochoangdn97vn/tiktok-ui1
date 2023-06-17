@@ -1,0 +1,103 @@
+.wrapper {
+    padding: 24px 16px;
+}
+.videoitem-wrapper {
+    display: flex;
+    position: relative;
+    padding: 20px 0;
+}
+.image-info {
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    object-fit: cover;
+}
+.videoitem-body {
+    margin-left: 20px;
+}
+.video-info {
+    margin-right: 110px;
+}
+.nick-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-right: 6px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.btn-item {
+    right: 0;
+    position: absolute;
+    top: 38px;
+    color: var(--primary);
+    padding: 4px 22px;
+    border: solid 1px var(--primary);
+    border-radius: 3px;
+    background: transparent;
+}
+.following-item {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.music-icon {
+    margin-right: 4px;
+}
+.full-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.description {
+    margin: 2px 0;
+}
+.name-music {
+    color: var(--text-color);
+    font-weight: 600;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+//video
+.video-play-wrapper {
+    display: flex;
+    margin-top: 4px;
+}
+////
+// .video-play {
+//     margin-right: 30px;
+//     position: relative;
+//     display: flex;
+//     justify-content: flex-end;
+// }
+//icon tổng chính
+.interactiveVideo {
+    justify-content: flex-end;
+    flex-direction: column;
+    display: flex;
+}
+//label icon tổng
+.interactiveVideo-iem-icon {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.interactiveVideo-heart {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: 50%;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin: 8px 0 6px 0;
+    cursor: pointer;
+}
+.heart-item {
+    margin-top: 8px;
+}
+.interactiveVideo-acount {
+    font-size: 1.2rem;
+    color: rgba(22, 24, 35, 0.75);
+}
+//

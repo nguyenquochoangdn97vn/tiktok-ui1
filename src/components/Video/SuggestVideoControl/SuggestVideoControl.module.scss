@@ -1,0 +1,161 @@
+//video control
+.video-play {
+    margin-right: 30px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    &:hover > .control {
+        opacity: 1;
+    }
+    &:hover > .control-report {
+        opacity: 1;
+    }
+    &.vertical {
+        height: calc(450px + (100vw - 768px) / 1152 * 100);
+    }
+
+    &.horizontal {
+        width: calc(450px + (100vw - 768px) / 1152 * 100);
+    }
+    // scroll-snap-align: start;
+}
+.video-playa {
+    // width: 310px;
+    // height: 550px;
+    height: 100%;
+    width: 100%;
+    min-width: 271px;
+    object-fit: cover;
+    border-radius: 8px;
+    // object-fit: fill;
+    // overflow-x: auto;
+    // scroll-snap-type: y mandatory;
+}
+.video-playa {
+    left: 0;
+    top: 0;
+}
+.control-report {
+    top: 24px;
+    right: 16px;
+    color: white;
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background-color: transparent;
+}
+.control {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    bottom: 24px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background-color: transparent;
+}
+.report-icon {
+    font-size: 1.6rem;
+}
+.title-report {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-left: 4px;
+    line-height: 1.6rem;
+}
+//control
+.controlPlay {
+    bottom: 24px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    left: 12px;
+}
+.report-Play {
+    // margin-left: 20px;
+}
+.report-Pause {
+    // margin-left: 20px;
+}
+//volume
+.volume-btn {
+    font-size: 18px;
+    right: 14px;
+    &:hover ~ .volume-control {
+        visibility: visible;
+    }
+}
+.volume {
+}
+//volumeMute
+// võ ngooài
+.volume-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 64px;
+    margin: 0 8px;
+    border-radius: 32px;
+    background: rgba(22, 24, 35, 0.34);
+    transform: rotate(180deg);
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+
+    position: absolute;
+    bottom: 64px;
+    right: 14px;
+    z-index: 2;
+    visibility: hidden;
+
+    &:hover {
+        visibility: visible;
+    }
+}
+// cột dọc volume
+.volume-bar {
+    width: 2px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        inset: -11px -19px;
+    }
+}
+
+.volume-dot {
+    // thanh kéo    
+    position: absolute;
+    inset: 0;
+    bottom: initial;
+    border-radius: inherit;
+    color: white;
+    background-color: currentColor;
+    height: 50%;
+    max-height: 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 12px;
+        height: 12px;
+        transform: translate(-50%, 50%);
+        border-radius: 50%;
+        background-color: currentColor;
+    }
+}
